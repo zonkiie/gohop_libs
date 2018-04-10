@@ -11,7 +11,7 @@ func TestLoadPlugin(t *testing.T) {
 	startfuncname := "Startfunc"
 	var p *plugin.Plugin
 	var e error
-	p, e = LoadPluginDirect(example_plugin)
+	p, e = LoadPlugin(example_plugin)
 	if e != nil {
 		t.Errorf("Failed to load plugin %s\n", example_plugin)
 	}
@@ -27,8 +27,8 @@ func TestLoadPlugin(t *testing.T) {
 /**
  * this function works
  */
-func TestLoadStartPlugin() {
-	p, p_err := LoadPluginDirect("plugins/example_plugin.so")
+func TestLoadStartPlugin(t *testing.T) {
+	p, p_err := LoadPlugin("plugins/example_plugin.so")
 	if p_err != nil {
 		panic(fmt.Sprintf("Failed to load plugin. Error is: %s\n", p_err.Error()))
 	}

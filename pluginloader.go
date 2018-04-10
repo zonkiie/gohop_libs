@@ -1,4 +1,4 @@
-package main
+package gohop_libs
 
 import (
 	"plugin"

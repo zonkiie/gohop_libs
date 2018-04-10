@@ -1,4 +1,4 @@
-package test
+package gohop_libs
 
 import (
 	"testing"
